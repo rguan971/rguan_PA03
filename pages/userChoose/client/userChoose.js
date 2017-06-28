@@ -10,10 +10,11 @@ Template.addMeal.events({
     console.log('adding '+name);
     instance.$('#name').val("");
     instance.$('#day').val("");
-    Meal.insert({name,day,
+    var userChoose = {name,day,
                 owner:Meteor.userId(),
-                createAt:new Date()});
-    //People.insert({name,birthyear})
+                createAt:new Date()};
+    Meteor.call('userChoose.insert',userChoose);
+    //Meal.insert(chore);
   }
 })
 
