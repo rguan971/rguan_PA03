@@ -10,9 +10,16 @@ Template.addMeal.events({
     console.log('adding '+name);
     instance.$('#name').val("");
     instance.$('#day').val("");
-    Meal.insert({name,day,owner:Meteor.userId(),createAT:new Date()});
+    Meal.insert({name,day,
+                owner:Meteor.userId(),
+                createAt:new Date()});
     //People.insert({name,birthyear})
   }
+})
+
+Template.mealrow.helpers({
+  isOwner() {console.dir(this);
+     return this.meal.owner == Meteor.userId()}
 })
 
 Template.mealrow.events({
@@ -20,10 +27,15 @@ Template.mealrow.events({
       console.dir(this);
       console.log(this);
       console.log(this.meal._id);
-      Meal.remove(this.meal._id);
+      if (this.meal.owner==Meteor.userId()){
+        Meal.remove(this.meal._id);
+      } else {
+        alert("Why are you deleting someone else's entry?");
+      }
     }
 })
 
+/*
 Template.userChoose.helpers({
   meallines: function(){
     // return the last five chats
@@ -69,3 +81,4 @@ Template.userChoose.events({
     Chats.insert(chatline);
   },
 })
+*/

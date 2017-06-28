@@ -85,7 +85,7 @@
 </template>
 
 <template name="addMeal">
-  MealName: <input type="text"
+  Meal name: <input type="text"
                 placeholder="meal name"
                 id="name">
   Day <input type="text" id="day"><br>
@@ -97,8 +97,8 @@
 <template name="showMeal">
   {{#if currentUser}}
   <ul>
-    {{#each meal in meallist}}
-      <li>{{> mealrow meal=meal}}</li>
+    {{#each m in meallist}}
+      <li>{{> mealrow meal=m}}</li>
     {{/each}}
   </ul>
   {{else}}
@@ -107,10 +107,13 @@
 </template>
 
 <template name="mealrow">
-  {{meal.name}}--{{meal.day}}
+  {{meal.name}}--{{meal.day}} ({{meal.createAt}})<br>
+  {{#if isOwner}}
   <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+  {{/if}}
 </template>
 
+<!--
 <template name="mealline">
   <li>
     {{c.text}}
@@ -118,4 +121,4 @@
     {{author c.createdBy}}
     {{c.createdBy}}
   </li>
-</template>
+</template> -->
