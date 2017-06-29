@@ -1,0 +1,15 @@
+
+.flex-container {
+    display: -webkit-flex;
+    display: flex;
+    width: 3200px;
+    height: 2000px;
+    background-color: lightgrey;
+}
+
+.flex-item {
+    background-color: lightyellow;
+    width: 800px;
+    height: 800px;
+    margin: 10px;
+}
