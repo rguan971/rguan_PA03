@@ -11,10 +11,6 @@ Template.addMeal.events({
     instance.$('#name').val("");
     instance.$('#day').val("");
 
-/*    meals = Meal.find({owner:Meteor.userId()}).fetch();
-    meals.forEach(function(meal){
-      Meal.remove(meal._id);
-    }) */
     var userChoose = {name,day,
                 owner:Meteor.userId(),
                 createAt:new Date()};
