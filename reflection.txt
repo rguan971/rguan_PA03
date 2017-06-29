@@ -1,0 +1,21 @@
+Feedback:
+1. A user’s feedback: The “userChoose” page is nice. The table at the “sponsor” page is nice. Add media queries to get responsive design.
+
+2. Another user’s feedback: First, I don’t know what purpose the website build for. Maybe the “userChoose” page should be moved to the home page so that users will be easier to catch it. Second, the bootcamp design is ugly. I recommend to use completely CSS.
+
+
+*********
+
+1) remove the insecure package and use Meteor methods for all of your database operations
+Done!
+
+2) run a user test on your app with two people in class and get their feedback on your app
+Please see the above.
+
+3) using CSS on at least one page (in addition to any Bootstrap) and use flexboxes 
+There is a about.css contain flexboxes to format the pictures in "Our goal" page.
+There is a home.css file in ./pages/home/client folder. It works for all pages.
+
+
+4) make it more useable
+Keep improving.
