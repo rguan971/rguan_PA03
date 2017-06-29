@@ -10,10 +10,20 @@ Template.addMeal.events({
     console.log('adding '+name);
     instance.$('#name').val("");
     instance.$('#day').val("");
+
+/*    meals = Meal.find({owner:Meteor.userId()}).fetch();
+    meals.forEach(function(meal){
+      Meal.remove(meal._id);
+    }) */
     var userChoose = {name,day,
                 owner:Meteor.userId(),
                 createAt:new Date()};
-    Meteor.call('userChoose.insert',userChoose);
+    Meteor.call('userChoose.insert',userChoose,
+      (err,res) => {
+        console.log('got the answer');
+        console.dir([err,res]);
+        }
+    );
     //Meal.insert(chore);
   }
 })
@@ -28,11 +38,12 @@ Template.mealrow.events({
       console.dir(this);
       console.log(this);
       console.log(this.meal._id);
-      if (this.meal.owner==Meteor.userId()){
+      Meteor.call('userChoose.remove', this.meal);
+      /*if (this.meal.owner==Meteor.userId()){
         Meal.remove(this.meal._id);
       } else {
         alert("Why are you deleting someone else's entry?");
-      }
+      }*/
     }
 })
 
