@@ -1,7 +1,8 @@
 Feedback:
-1. A user’s feedback: The “userChoose” page is nice. The table at the “sponsor” page is nice. Add media queries to get responsive design.
+Feedback:
+1. Joshua Alvarado’s feedback: Great usage of bootstrap features and forms! I like the idea, but I definitely believe that you should add more functionality to the "Goal" page. You are trying to get a lot of data from the user, and it would be impressive if you were able to successfully store it and relay it back to the user.
 
-2. Another user’s feedback: First, I don’t know what purpose the website build for. Maybe the “userChoose” page should be moved to the home page so that users will be easier to catch it. Second, the bootcamp design is ugly. I recommend to use completely CSS.
+2. Nina Xu’s feedback: First, I don’t know what purpose the website build for. Maybe the “userChoose” page should be moved to the home page so that users will be easier to catch it. Second, the bootcamp design is ugly. I recommend to use completely CSS.
 
 
 *********
